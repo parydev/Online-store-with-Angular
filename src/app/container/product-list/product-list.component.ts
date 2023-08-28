@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
+  
    products = [{
     id : 1,
     name : "Nike React Infinity Run",
@@ -342,11 +343,8 @@ export class ProductListComponent {
 
 
    },
-  
-  
-  
-  
-  
-  
   ]
+  totalProducts = this.products.length;
+  totalinStock : number= this.products.filter( p => p.is_in_inventory === true).length;
+  totaloutofStock = this.products.filter( p => p.is_in_inventory === false).length;
 }
