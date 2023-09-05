@@ -12,4 +12,6 @@ export class FilterComponent {
     inStock : number = 0;
     @Input()
     outofStock : number = 0;
+
+    selectedFilterRadioButton : string = 'false';
 }

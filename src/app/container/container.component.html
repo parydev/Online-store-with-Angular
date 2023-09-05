@@ -1,7 +1,7 @@
 
 
-    <app-search></app-search>
-    <app-product-list></app-product-list>
+    <app-search (searchTextChanged)="setSearchText($any($event))"></app-search>
+    <app-product-list [searchText]="searchText"></app-product-list>
    
    
 

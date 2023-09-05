@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , Input } from '@angular/core';
 
 @Component({
   selector: 'app-product-list',
@@ -249,7 +249,7 @@ export class ProductListComponent {
    },
    {
     id : 16,
-    name : "Nike React Infinity Run",
+    name : "Adidas React Infinity Run",
     description : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     brand : "NIKE",
     gender : "MEN",
@@ -265,7 +265,7 @@ export class ProductListComponent {
    },
    {
     id : 17,
-    name : "Nike React Infinity Run",
+    name : "Adidas React Infinity Run",
     description : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     brand : "NIKE",
     gender : "MEN",
@@ -281,7 +281,7 @@ export class ProductListComponent {
    },
    {
     id : 18,
-    name : "Nike React Infinity Run",
+    name : "Aldo React Infinity Run",
     description : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     brand : "NIKE",
     gender : "MEN",
@@ -297,7 +297,7 @@ export class ProductListComponent {
    },
    {
     id : 19,
-    name : "Nike React Infinity Run",
+    name : "Aldo React Infinity Run",
     description : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     brand : "NIKE",
     gender : "MEN",
@@ -313,7 +313,7 @@ export class ProductListComponent {
    },
    {
     id : 20,
-    name : "Nike React Infinity Run",
+    name : "361 React Infinity Run",
     description : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     brand : "NIKE",
     gender : "MEN",
@@ -329,7 +329,7 @@ export class ProductListComponent {
    },
    {
     id : 21,
-    name : "Nike React Infinity Run",
+    name : "Adidas React Infinity Run",
     description : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     brand : "NIKE",
     gender : "MEN",
@@ -347,4 +347,7 @@ export class ProductListComponent {
   totalProducts = this.products.length;
   totalinStock : number= this.products.filter( p => p.is_in_inventory === true).length;
   totaloutofStock = this.products.filter( p => p.is_in_inventory === false).length;
+  @Input()
+  searchText : string = '';
+  
 }

@@ -2,8 +2,14 @@
             [inStock]="totalinStock"  
             [outofStock]="totaloutofStock">
 </app-filter>
-<div class="ekart--products--container">
+<div class="ekart--products--container"  >
+   
+    <ng-container *ngFor = "let prod of products" >
+         <app-product  [product] = "prod"
+         *ngIf="searchText === '' || prod.name.toLowerCase().includes(searchText)">
+        </app-product>
+        
+    </ng-container>
     
-    <app-product *ngFor = "let prod of products" [product] = "prod"></app-product>
 </div>
 
