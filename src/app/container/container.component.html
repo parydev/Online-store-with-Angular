@@ -2,6 +2,26 @@
 
     <app-search (searchTextChanged)="setSearchText($any($event))"></app-search>
     <app-product-list [searchText]="searchText"></app-product-list>
+
+    <div class="ekart-featured-products">
+        <div class="ekart-featured-product-heading">
+            <h3>Latest Arrival in Popular Brands</h3>
+        </div>
+        
+        <featured-brands>
+            <h3 class="title">New Arrivals in Nike</h3>
+            <button class="call-to-action">show new arrivals in Nike</button>
+        </featured-brands>
+        <featured-brands>
+            <h3 class="title">New Arrivals in Adidas</h3>
+            <button class="call-to-action">show new arrivals in Adidas</button>
+        </featured-brands>
+        <featured-brands>
+            <h3 class="title">New Arrivals in Reebok</h3>
+            <button class="call-to-action">show new arrivals in Reebok</button>
+        </featured-brands>
+    
+    </div>
    
    
 

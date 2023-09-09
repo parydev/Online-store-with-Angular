@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductListComponent } from './container/product-list/product-list.component';
 import { ProductComponent } from './container/product-list/product/product.component';
 import { FilterComponent } from './container/product-list/filter/filter.component';
+import { FeaturedBrandsComponent } from './container/featured-brands/featured-brands.component';
 
 
 
@@ -24,6 +25,7 @@ import { FilterComponent } from './container/product-list/filter/filter.componen
     ProductListComponent,
     ProductComponent,
     FilterComponent,
+    FeaturedBrandsComponent,
   
     
  
